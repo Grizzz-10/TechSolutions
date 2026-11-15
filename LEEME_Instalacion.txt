@@ -1,0 +1,16 @@
+﻿TECH SOLUTIONS · SISTEMA DE VENTAS · CÓMO INSTALAR
+
+1. Base de datos (una sola vez): en SQL Server Management Studio abre, en este orden, y pulsa F5 en cada uno:
+      00_BD_Completa.sql          (crea la base TechSolutions, tablas y datos de ejemplo)
+      01_BD_ReporteClientes.sql   (crea el procedimiento almacenado del reporte de clientes)
+2. Ejecuta setup.exe -> Siguiente -> Siguiente -> Cerrar.
+3. Abre «Tech Solutions» desde el escritorio o el menú Inicio.
+4. La primera vez, el programa pide crear al ADMINISTRADOR (no viene en la base de datos).
+
+Si el servidor no es .\SQLEXPRESS: abre el Bloc de notas como administrador y edita
+C:\Program Files (x86)\Tech Solutions\Sistema de Ventas\TechSolutions.exe.config
+  - Data Source          -> el nombre de tu servidor
+  - MinutosInactividad   -> minutos sin actividad antes de cerrar la sesión (por defecto 5)
+
+Desinstalar: Configuración -> Aplicaciones -> Sistema de Ventas -> Desinstalar.
+(La base de datos no se borra al desinstalar.)
